@@ -5,8 +5,8 @@
   const FRAME_RATE = 60
   const PARTICLE_NUM = 2000
   const RADIUS = Math.PI * 2
- let CANVASWIDTH = window.innerWidth
-let CANVASHEIGHT = window.innerHeight
+CANVASHEIGHT = document.documentElement.clientHeight
+CANVASWIDTH = document.documentElement.clientWidth
   const CANVASID = 'canvas'
 let texts = [
   'MY SALJEAN',
@@ -30,7 +30,7 @@ let texts = [
     quiver = true,
     text = texts[0],
     textIndex = 0,
-    textSize = 70
+    textSize = Math.min(window.innerWidth / 10, 80)
 
   function draw () {
     ctx.clearRect(0, 0, CANVASWIDTH, CANVASHEIGHT)
