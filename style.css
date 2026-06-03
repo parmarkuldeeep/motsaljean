@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather-400 {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+/* 
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background3.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.titulo {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120px;
+    color: crimson;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.678);
+}
+
+.titulo::selection {
+    background-color: aliceblue;
+    color: crimsom;
+    text-shadow: none;
+}
+
+.subtitulo {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: darkorchid;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.678);
+}
+
+.subtitulo::selection {
+    background-color: aliceblue;
+    color: darkorchid;
+    text-shadow: none;
+} */
+.hero-section-fixed {
+  background: linear-gradient(to bottom, #fce4ec, #fff);
+  /* Gradiente suave rosa */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  /* Reduzindo um pouco a altura */
+}
+
+.photo-container-fixed {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  /* Reduzindo o espaço entre as fotos */
+  margin-bottom: 30px;
+  /* Reduzindo a margem abaixo das fotos */
+  max-width: 90%;
+  /* Para as fotos não ficarem muito largas */
+}
+
+.hero-photo-fixed {
+  width: 150px;
+  /* Tamanho fixo para as fotos */
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(-3deg);
+  max-width: 45%;
+  /* Para controlar a largura em relação ao container */
+  height: auto;
+  /* Manter a proporção da imagem */
+}
+
+.photo-right-fixed {
+  transform: rotate(3deg);
+}
+
+.message-container-fixed {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.love-message-fixed {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.4em;
+  /* Reduzindo o tamanho da fonte */
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.thank-you-message-fixed {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1em;
+  /* Reduzindo o tamanho da fonte */
+  color: #555;
+  line-height: 1.4;
+  /* Ajustando a altura da linha */
+  max-width: 90%;
+  margin: 0 auto 15px;
+}
+
+.explore-button-fixed {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #e91e63;
+  border: 2px solid #e91e63;
+  padding: 12px 25px;
+  /* Reduzindo o padding do botão */
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.explore-button-fixed:hover {
+  background-color: #e91e63;
+  color: white;
+}
+
+.timeline-container {
+  position: relative;
+  /* Para posicionar a linha vertical */
+  padding: 20px 0;
+  background-image: url(images/background.png);
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #f8bbd0;
+  /* Cor da linha vertical */
+  transform: translateX(-50%);
+  z-index: 0;
+  /* Para a linha ficar atrás dos balões de data */
+}
+
+.timeline-event {
+  margin-bottom: 40px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.event-date {
+  background-color: #f8bbd0;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9em;
+  z-index: 1;
+}
+
+.event-content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 60%;
+  /* Aumentando a largura do conteúdo */
+}
+
+/* Posiciona o conteúdo à esquerda para eventos ímpares */
+.timeline-event:nth-child(odd) .event-content {
+  left: -10%;
+  /* Movendo um pouco para a esquerda */
+}
+
+/* Posiciona a data à esquerda para eventos ímpares */
+.timeline-event:nth-child(odd) .event-date {
+  left: 5%;
+  /* Ajustando a posição da data */
+  transform: translateX(0);
+}
+
+/* Posiciona o conteúdo à direita para eventos pares */
+.timeline-event:nth-child(even) .event-content {
+  right: -10%;
+  /* Movendo um pouco para a direita */
+}
+
+/* Posiciona a data à direita para eventos pares */
+.timeline-event:nth-child(even) .event-date {
+  right: 5%;
+  /* Ajustando a posição da data */
+  left: auto;
+  transform: translateX(0);
+}
+
+.event-content p {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.event-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/*  */
+
+.mini-carta-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.envelope-fechado {
+  width: 150px;
+  /* Largura do envelope */
+  height: 100px;
+  /* Altura do corpo do envelope */
+  background-color: #f8bbd0;
+  /* Cor do envelope */
+  position: relative;
+  margin: 20px auto;
+  /* Centralizar o envelope */
+  border-radius: 5px;
+  cursor: pointer;
+  /* Indicar que é clicável */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.aba-superior {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #f8bbd0;
+  transform-origin: top center;
+  transform: perspective(100px) rotateX(60deg);
+  /* Aba fechada */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.aba-esquerda {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 75px solid #e91e63;
+  /* Cor da aba */
+  border-bottom: 50px solid transparent;
+  transform-origin: left center;
+  transform: translateX(-70px);
+  /* Aba fechada */
+}
+
+.aba-direita {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 75px solid #e91e63;
+  /* Cor da aba */
+  border-bottom: 50px solid transparent;
+  transform-origin: right center;
+  transform: translateX(70px);
+  /* Aba fechada */
+}
+
+.corpo-envelope {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 1em;
+}
+
+.icone-carta {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.carta-conteudo {
+  background-color: #fff;
+  border: 1px solid #f8bbd0;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  
+  margin-bottom: 300px;
+  max-width: 80%;
+  text-align: left;
+  opacity: 0;
+  /* Inicialmente escondido */
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.carta-conteudo h3 {
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.carta-conteudo p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.carta-conteudo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.carta-conteudo.aberto {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carta-conteudo p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 0.5em;
+  /* Exemplo de tamanho menor */
+}
+
+/*  */
+
+.mini-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(248, 187, 210, 0.8); /* Rosa claro semi-transparente */
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around; /* Espaço ao redor dos itens */
+  align-items: center;
+  z-index: 1000; /* Para ficar acima de outros elementos */
+  font-size: 0.9em; /* Tamanho da fonte menor */
+}
+
+.mini-player .controls button {
+  background: none;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.mini-player .controls button:focus {
+  outline: none; /* Remover a borda de foco padrão */
+}
+
+#currentTrackName {
+  flex-grow: 1; /* Ocupar o espaço restante */
+  text-align: center;
+}
